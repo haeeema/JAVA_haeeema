@@ -1,4 +1,4 @@
-package human;
+package Recap;
 
 public class Practice {
 	public static int sum(int a, int b) {
