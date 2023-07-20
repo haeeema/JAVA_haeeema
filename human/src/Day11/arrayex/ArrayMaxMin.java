@@ -2,7 +2,7 @@ package Day11.arrayex;
 
 import java.util.Scanner;
 
-public class MaxMinValue {
+public class ArrayMaxMin {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 
@@ -13,8 +13,7 @@ public class MaxMinValue {
 		System.out.println("값 입력 : ");
 		
 		for (int i = 0; i < arr.length; i++) {
-			int input = sc.nextInt();
-			arr[i] = input;
+			arr[i] = sc.nextInt();
 		}
 		
 		for (int i = 0; i < arr.length; i++) {
@@ -24,8 +23,8 @@ public class MaxMinValue {
 				max = arr[i];
 		}
 		
-		System.out.println("MAX = " + max);
-		System.out.println("MIN = " + min);
+		System.out.println("Maximum Value : " + max);
+		System.out.println("Minimum Value : " + min);
 		
 		sc.close();
 	}
