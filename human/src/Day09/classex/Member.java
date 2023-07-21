@@ -1,30 +1,34 @@
 package Day09.classex;
-//dto(data transfer object), vo(value object)
-public class Member {
+//dto(data transfer object) vo(value object)
+public class Member { 
 	private String id;
 	private String pwd;
-//	private String name;
-//	private String email;
+	private String name;
+	private String email;
+	private int age;
 	private Address address;
 	
-	// 초기화 되는지 확인하기 위함
 	public Member() {
-//		System.out.println("생성자 메소드");
-//		System.out.println("id = " + id);
-//		System.out.println("pwd = " + pwd);
-//		System.out.println("name = " + name);
-//		System.out.println("email = " + email);
+		
 	}
-	
-	public Member(String id, String pwd, Address address) {
-		this.id = id;
-		this.pwd = pwd;
-		this.address = address;
+	public Member(String id,String pwd) {
+		this.id=id;
+		this.pwd=pwd;
 	}
-	
-	public Member(String id, String pwd) {
-		this.id = id;
-		this.pwd = pwd;
+	public Member(String id,int age) {
+		this.id=id;
+		this.age=age;
+	}
+	public Member(String id,String name,String email) {
+		this.id=id;
+		this.name=name;
+		this.email=email;
+	}
+	public Member(String id,String name,String email,Address addr) {
+		this.id=id;
+		this.name=name;
+		this.email=email;
+		this.address=addr;
 	}
 	
 	public void setId(String id) {
@@ -33,30 +37,34 @@ public class Member {
 	public String getId() {
 		return id;
 	}
-	
 	public void setPwd(String pwd) {
-		this.pwd = pwd;
+		this.pwd=pwd;
 	}
-
 	public String getPwd() {
 		return pwd;
 	}
 	
-
+	public String getEmail() {
+		return email;
+	}
+	public void setEmail(String email) {
+		this.email = email;
+	}
 	public Address getAddress() {
 		return address;
 	}
-
 	public void setAddress(Address address) {
 		this.address = address;
 	}
-
 	@Override
 	public String toString() {
-		return "Member [id=" + id + ", pwd=" + pwd + ", address=" + address + "]";
+		return "Member [id=" + id + ", pwd=" + pwd + ", email=" + email + "]";
 	}
-
 	
-	// toString을 쓰면 주소대신 나와주는것 같다.
-	// 개별적인 값은 한 문장으로 만들어준다.
+	public void printMember() {
+		System.out.println("ID : " + id);
+		System.out.println("PWD : " + pwd);
+		System.out.println("EMAIL : " + email);
+	}
+	
 }

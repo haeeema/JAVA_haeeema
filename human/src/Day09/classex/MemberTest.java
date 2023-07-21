@@ -3,61 +3,58 @@ package Day09.classex;
 import java.util.Scanner;
 
 public class MemberTest {
-	// 속성, 메소드
+	//속성, 메소드
 	public static void main(String[] args) {
-		/**
-		//     객체이름 = 주소 생성자함수(멤버 변수를 초기화한다)
-		Member member1 = new Member();
+		 /*Member member=new Member();
+		 System.out.println("1번:"+member.toString());
+		 //member.name="java";
+		 //System.out.println(member.name);
+		 String name = "자바";
+		 System.out.println(name);
+		 /////////////////////////////////////
+		 member.setId("자바...");
+		 member.setPwd("자바");
+		 System.out.println("2번:"+member);
+		 String id=member.getId();
+		 System.out.println(id);
+		 Member member2=new Member("java","java");
+	
+		 String id2=member2.getId();
+		 String pwd2=member2.getPwd();
+		 System.out.println("id2="+id2+",pwd2="+pwd2);
+		 System.out.printf("id2=%10s, pwd=%-10s\n\n",id2,pwd2);
+		 ////////////////////////////////////////////
+		 Address address=new Address("서울", "영등포구", "영등");
+		 Member mem=new Member("javamem", "javamem", "javamem", address);
+		 
+		 System.out.println("주소 :"+address);
+		 System.out.println("Member:"+mem);
+		 */
+		//키보드로 부터 id,pwd을 입력
+		Scanner sc=new Scanner(System.in);
+		System.out.print("ID:");
+		String id=sc.next();
+		System.out.print("PWD:");
+		String pwd=sc.next();
+		//입력후 Member클래스의 생성자 메소드(==setXXX())로 전달하여 출력한다
+		Member member=new Member(id, pwd);
+		String id2=member.getId();//String id2="java";
+		String pwd2=member.getPwd();
+		System.out.println("ID :"+id2+"   PWD:"+pwd2);
+		 //입력 값을 setXXX()로 전달하여 출력하시오
+		member.setId(id2);
+		member.setPwd(pwd2);
+		String id3=member.getId();
+		String pwd3=member.getPwd();
+		System.out.println("ID :"+id3+"   PWD:"+pwd3);
+		//값 변경
+		member.setId("computer");
+		System.out.println("ID :"+member.getId()+"   PWD:"+pwd3);
+		//값 조회
+		id3=member.getId();
+		pwd3=member.getPwd();
+		System.out.println("ID :"+id3+"   PWD:"+pwd3);
 		
-		System.out.println(member1);
-		// 멤버를 그냥 프린트
 		
-		member1.setId("아이디");
-		String id = member1.getId();
-		System.out.println(id);
-		
-		Member member2 = new Member("java","java-pwd");
-		// set method와 같은 기능
-		
-		String pwd = member2.getPwd();
-		System.out.println("member의 id : " + id + ", member2의 pwd" + pwd);
-		
-		Address addr = new Address("서울", "영등포구", "영동");
-		
-		Member member3 = new Member("java2", "java2", addr);
-		
-		Address member3addr = member3.getAddress();
-		
-		System.out.println("member의 id : " + id + ", member2의 pwd" + pwd + ", member3의 addr" + addr);
-		System.out.println(member3addr);
-		**/
-		Scanner sc = new Scanner(System.in);
-		
-		System.out.println("id : ");
-		String id = sc.next();
-		System.out.println("pwd : ");
-		String pwd = sc.next();
-		
-		Member member = new Member();
-		// Member member = new Member(id, pwd);
-		// 1. 차이가 어떤건지? 차이없음 but 파라미터를 넣는 생성을 많이 쓴다.
-		// 2. set이 왜 필요한건지? 차이없음
-		
-		member.setId(id);
-		// 매개변수가 없는 생성자가 반드시 있어야한다. 주의!!
-		System.out.print("입력 id : " + member.getId());
-		System.out.println();
-		
-		member.setPwd(pwd);
-		String getPwd = member.getPwd();
-		System.out.print("입력 pwd : " + getPwd);
-//		== System.out.println("입력 id : " + member.getId());
-//		굳이 변수를 만들지 않아도 된다. 차이가 없다.
-		System.out.println();
-		
-		//값변경
-		member.setId("computerId");
-		System.out.println("수정 id : " + member.getId());
-		sc.close();
 	}
 }

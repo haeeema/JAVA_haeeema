@@ -2,14 +2,13 @@ package Day09.classex;
 
 public class Address {
 	private String city;
-	private String gu; 
+	private String gu;
 	private String dong;
 	
-	public Address() {
-	
-	}
-	
+	public Address() {}
+
 	public Address(String city, String gu, String dong) {
+		super();
 		this.city = city;
 		this.gu = gu;
 		this.dong = dong;
@@ -43,6 +42,5 @@ public class Address {
 	public String toString() {
 		return "Address [city=" + city + ", gu=" + gu + ", dong=" + dong + "]";
 	}
-	
 	
 }
