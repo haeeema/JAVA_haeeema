@@ -1,15 +1,20 @@
-package Day14.Ex03_Student;
+package Day15.Ex01_Poly;
 
 public class University extends Student {
-	private int courses; // 학점
+	private int courses;
 
-	public University(String _name, int _grade, int _courses) {
-		System.out.println("University 생성자 호출");
-		name = _name; // 부모의 멤버 변수에 접근한다.
-		grade = _grade;
-		courses = _courses;
+	public University(String name, int grade, int courses) {
+		super();
+		System.out.println("University constructor");
+		super.name = name;
+		super.grade = grade;
+		this.courses = courses;
 	}
 
+	public University() {
+		this("Lee", 2, 20);
+	}
+	
 	// 학점을 출력하는 메서드
 	public int getCourses() {
 		return courses;
