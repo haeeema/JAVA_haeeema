@@ -1,4 +1,4 @@
-package Day09.classex;
+package Day09;
 //dto(data transfer object) vo(value object)
 public class Member { 
 	private String id;

@@ -1,4 +1,4 @@
-package Day11.arrayex;
+package Day11;
 
 public class ArraySumAvg {
 	public static void main(String[] args) {

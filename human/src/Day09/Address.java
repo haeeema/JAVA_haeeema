@@ -1,4 +1,4 @@
-package Day09.classex;
+package Day09;
 
 public class Address {
 	private String city;

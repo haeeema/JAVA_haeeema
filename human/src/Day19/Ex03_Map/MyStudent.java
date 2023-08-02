@@ -1,4 +1,4 @@
-package Day19.Ex01_ArrayList;
+package Day19.Ex03_Map;
 
 public class MyStudent {
 	private String name;

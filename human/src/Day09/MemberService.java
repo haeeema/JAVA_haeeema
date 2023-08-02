@@ -1,4 +1,4 @@
-package Day09.classex;
+package Day09;
 //외부에서 요청 처리
 
 public class MemberService {

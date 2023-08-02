@@ -1,5 +1,4 @@
-package Day11.arrayex;
-
+package Day11;
 
 /**
  * 배열의 순서를 반대로 나열하는 방법

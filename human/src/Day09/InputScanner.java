@@ -1,4 +1,4 @@
-package Day09.classex;
+package Day09;
 
 import java.util.Scanner;
 

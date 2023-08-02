@@ -1,8 +1,10 @@
-package Day19.Ex01_ArrayList;
+package Day19.Ex02_Set;
 
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.Set;
+
+import Day19.Ex01_List.MyStudent;
 
 public class HashSetTest {
 	public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package Day19.Ex01_ArrayList;
+package Day19.Ex01_List;
 
 import java.util.ArrayList;
 import java.util.List;

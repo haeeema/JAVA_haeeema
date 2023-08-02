@@ -1,4 +1,4 @@
-package Day11.arrayex;
+package Day11;
 
 import java.util.Scanner;
 
