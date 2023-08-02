@@ -1,16 +1,23 @@
-package Day19.Ex03_Map;
+package Day19.Ex02_Map;
 
-import java.util.HashMap;
+import java.util.Hashtable;
 import java.util.Map;
 
-public class HashMapTest {
+/**
+ * key와 value값이 null을 허용하지 않는다.
+ * 
+ * **/
+
+
+public class HashTableTest {
 	public static void main(String[] args) {
-		Map map = new HashMap();
+		Map map = new Hashtable();
 		
 		map.put(1, new Integer(100));
 		map.put("second", "Hello World!!");
 		map.put("third", new MyStudent());
-		map.put("forth", null);
+//		map.put("fourth", null);
+		// value에 null을 허용하지 않는다.
 		
 //		Integer i = map.get(1);
 		Integer i = (Integer) map.get(1);
@@ -20,11 +27,8 @@ public class HashMapTest {
 		
 		System.out.println(i);
 		System.out.println(str);
-		System.out.println();
-		
 		MyStudent st = (MyStudent) map.get("third");
 		System.out.println(st);
-		System.out.println();
 		
 		System.out.println(map.get("third"));
 		System.out.println(map.get("fourth"));

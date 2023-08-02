@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ProdTest {
-	public void getProdInfo(List list) {
+	public void getProdInfo(List<Product> list) {
 		Product prod = null;
 		String code = null;
 		String name = null;
@@ -28,7 +28,7 @@ public class ProdTest {
 	
 	public static void main(String[] args) {
 		// List
-		ArrayList pList = new ArrayList();
+		ArrayList<Product> pList = new ArrayList<Product>();
 		Product p1 = new Product();
 		Product p2 = new Product("0002", "smartTV", "white", 200);
 		Product p3 = new Product("0003", "laptop", "silver", 100);

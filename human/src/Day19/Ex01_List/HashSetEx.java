@@ -1,4 +1,4 @@
-package Day19.Ex02_Set;
+package Day19.Ex01_List;
 
 import java.util.HashSet;
 import java.util.Iterator;
