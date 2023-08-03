@@ -1,4 +1,4 @@
-package Day20.Recap;
+package Day21;
 
 import java.io.InputStream;
 import java.io.PrintStream;
@@ -12,15 +12,19 @@ public class SystemInOut3 {
 		byte[] datas = new byte[100];
 		
 		System.out.println("Name : ");
-		int nameLen = inputStream.read(datas);
-		String name = new String(datas, 0, nameLen - 2);
+		int nameLength = inputStream.read(datas);
 		
+		String name = new String(datas, 0, nameLength - 2);
+		// Enter값이 두칸 들어가 있기 때문에 2개를 뺀다.
+				
 		System.out.println("Comment : ");
-		int commLen = inputStream.read(datas);
+		int commLength = inputStream.read(datas);
+		
+		String comment = new String(datas, 0, commLength - 2);
+		
+		System.out.println("commLen : " + commLength);
 		System.out.println("datas : " + datas);
-		System.out.println("commLen : " + commLen);
 		System.out.println();
-		String comment = new String(datas, 0, commLen - 2);
 		
 		printStream.println("Input name : " + name);
 		printStream.println("Input comment : " + comment);
