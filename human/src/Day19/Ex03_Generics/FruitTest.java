@@ -13,13 +13,14 @@ public class FruitTest {
 		int value = 0; // The number of the fruit
 		
 		HashMap<String, Number> map = new HashMap<String, Number>();
+
 		
 		for (int i = 0; i < fruit.length; i++) {
 			fruitName = fruit[i]; // fruitName "사과", "바나나", "귤", "수박"
 			Set set = map.keySet(); // HashMap의 모든 키를 가지고 온다.
-			
 			// Iterator form 27p
 			Iterator ite = set.iterator();
+			
 			while(ite.hasNext()) {  // ite.hasNext()
 				String name = (String) ite.next();  // ite.next()
 				if(fruitName.equals(name)) {
